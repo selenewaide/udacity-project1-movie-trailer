@@ -14,7 +14,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will require Python version 2 or 3 installed.
+* Python version 2.7, or later - to run the script that renders the website
+* Git - to clone the project repo
+* Web Browser (such as Chrome or Safari)
 
 ### Installing & Running
 
@@ -47,6 +49,6 @@ Selene Waide
 
 ## Acknowledgments
 
-* Udacity Full Stack Nanodegree
-* Youtube 
-* OMDB
+* Udacity Full Stack Nanodegree for a fun first project
+* Youtube for use of it's API
+* OMDB for use of it's API
