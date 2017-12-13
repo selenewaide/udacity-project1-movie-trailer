@@ -15,27 +15,23 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * Python version 2.7, or later - to run the script that renders the website
+* Youtube API key (provided to Udacity when submitting project)
+* OMDB API key (provided to Udacity when submitting project)
 
-### Installing & Running
-
-This project can be cloned from (https://github.com).
+### Install & Run
 
 ###### Step 1
-Create a local folder for your project.
-
-###### Step 2
-Open a terminal and cd into the folder.
-```
-cd your_folder_path
-```
-
-###### Step 3
-Clone the repo using git.
+Clone the project from (https://github.com).
 ```
 git clone https://github.com/selenewaide/udacity-project1-movie-trailer.git
 ```
 
-###### Step 4
+###### Step 2
+In the 'data' directory, create a new file called 'keys.txt'.
+The first line of this file must contain the Youtube API key.
+The second line of this file must contain the OMDB API key.
+
+###### Step 3
 Run the python script 'entertainment_center.py' to render the website.
 ```
 python entertainment_center.py
