@@ -1,3 +1,7 @@
+# Use a list of movie objects.
+# Render a web page with movie thumbnails.
+
+
 import webbrowser
 import os
 import codecs

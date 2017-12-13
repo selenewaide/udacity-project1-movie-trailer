@@ -8,74 +8,74 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
-        body {
-            padding-top: 80px;
-        }
-        #trailer .modal-dialog {
-            margin-top: 200px;
-            width: 640px;
-            height: 480px;
-        }
-        .hanging-close {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            z-index: 9001;
-        }
-        #trailer-video {
-            width: 100%;
-            height: 100%;
-        }
-        .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
-        }
-        .movie-tile:hover {
-            background-color: #EEE;
-            cursor: pointer;
-        }
-        .scale-media {
-            padding-bottom: 56.25%;
-            position: relative;
-        }
-        .scale-media iframe {
-            border: none;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 0;
-            background-color: white;
-        }
-        .trailer-title {
-          text-align: center;
-        }
-        .thumbnail {
-          display: inline-block;
-        }
-        .statistic-group {
-          margin: 1em 0;
-          
-          .statistic {
-            display: inline-block;
-          }
-        }
-        table {
-          margin: 0;
-          padding: 0;
-          font-size: 1em;
-        }
-        #footer {
-            background-color: #17202A;
-            color: gray;
-            width: 100%;
-            height: 1.5em;
-            text-align: center;
-            font-size: 1.5em;
-            display: inline-block;
-        }
-    </style>
-    <script type="text/javascript" charset="utf-8">
+    body {
+        padding-top: 80px;
+    }
+    #trailer .modal-dialog {
+        margin-top: 200px;
+        width: 640px;
+        height: 480px;
+    }
+    .hanging-close {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        z-index: 9001;
+    }
+    #trailer-video {
+        width: 100%;
+        height: 100%;
+    }
+    .movie-tile {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+    .movie-tile:hover {
+        background-color: #EEE;
+        cursor: pointer;
+    }
+    .scale-media {
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+    .scale-media iframe {
+        border: none;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: white;
+    }
+    .trailer-title {
+      text-align: center;
+  }
+  .thumbnail {
+      display: inline-block;
+  }
+  .statistic-group {
+      margin: 1em 0;
+      
+      .statistic {
+        display: inline-block;
+    }
+}
+table {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+#footer {
+    background-color: #17202A;
+    color: gray;
+    width: 100%;
+    height: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    display: inline-block;
+}
+</style>
+<script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
             // Remove the src so the player itself gets removed, as this is the only
@@ -133,7 +133,7 @@
               'type': 'text-html',
               'src': sourceUrl,
               'frameborder': 0
-            }));
+          }));
             
         });
         
@@ -141,365 +141,365 @@
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
-          });
         });
-    </script>
+      });
+  </script>
 </head>
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <!-- Trailer Video Modal -->
-    <div class="modal" id="trailer">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
-          </a>
-          <!-- Movie Trailer Window -->
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h2 class="panel-title trailer-title"></h2>
-              </div>
-              <div class="panel-body">
-                <div class="scale-media" id="trailer-video-container">
-                </div>
-              <!-- Statistics Section -->  
-                <div class="table-responsive">   
-                  <table class="table">
-                    <tr>
-                      <td>
-                        <p class="trailer-rated">
-                        <h5>Rated</h5>
-                      </td> 
-                      <td>
-                        <p class="trailer-rating">
+<body>
+  <!-- Trailer Video Modal -->
+  <div class="modal" id="trailer">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+          <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+        </a>
+        <!-- Movie Trailer Window -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title trailer-title"></h2>
+          </div>
+          <div class="panel-body">
+            <div class="scale-media" id="trailer-video-container">
+            </div>
+            <!-- Statistics Section -->  
+            <div class="table-responsive">   
+              <table class="table">
+                <tr>
+                  <td>
+                    <p class="trailer-rated">
+                      <h5>Rated</h5>
+                    </td> 
+                    <td>
+                      <p class="trailer-rating">
                         <h5>Ratings</h5>
                       </td>
                       <td>
                         <p class="trailer-votes">
-                        <h5>Votes</h5>
-                      </td>
-                      <td>
-                        <p class="trailer-year">
-                        <h5>Year</h5>
-                      </td>
-                      <td>
-                        <p class="trailer-runtime">
-                        <h5>Runtime</h5>
-                      </td>
-                      <td>
-                        <p class="trailer-boxoffice">
-                        <h5>Boxoffice</h5>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <hr>
-                <!-- Movie Trailer -->  
-                <p class="trailer-storyline">
-                </p>
-                <hr>
-                <!-- Additional Info -->  
-                <div>
-                  <strong>Genre: </strong>
-                  <p class="trailer-genre">
-                </div>
-                <div>
-                  <strong>Director: </strong>
-                  <p class="trailer-director">
-                </div>
-                <div>
-                  <strong>Actors: </strong>
-                  <p class="trailer-actors">
-                </div>
-                <div>
-                  <strong>Awards: </strong>
-                  <p class="trailer-awards">
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <!-- Main Page Content -->
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-               Selene's Movie Trailers Project
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>
-          Movie Trailer Website
-        </h1>
-        <p>
-          Hi! Here's my selection of movie trailers. 
-          Click on any movie thumbnail to display its trailer, plot and movie trivia.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="frdj1zb9sMY" 
-      data-title-id="Rogue One" 
-      data-storyline-id="All looks lost for the Rebellion against the Empire as they learn of the existence of a new super weapon, the Death Star. Once a possible weakness in its construction is uncovered, the Rebel Alliance must set out on a desperate mission to steal the plans for the Death Star. The future of the entire galaxy now rests upon its success."   
-      data-awards-id="Nominated for 2 Oscars. Another 21 wins & 77 nominations."
-      data-director-id="Gareth Edwards"
-      data-genre-id="Action, Adventure, Sci-Fi"
-      data-boxoffice-id="$532,171,696"
-      data-rated-id="PG-13"
-      data-rating-id="7.9"
-      data-runtime-id="133 min"
-      data-year-id="2016"
-      data-votes-id="373,473"
-      data-actors-id="Felicity Jones, Diego Luna, Alan Tudyk, Donnie Yen"
-      data-toggle="modal" 
-      data-target="#trailer">
+                          <h5>Votes</h5>
+                        </td>
+                        <td>
+                          <p class="trailer-year">
+                            <h5>Year</h5>
+                          </td>
+                          <td>
+                            <p class="trailer-runtime">
+                              <h5>Runtime</h5>
+                            </td>
+                            <td>
+                              <p class="trailer-boxoffice">
+                                <h5>Boxoffice</h5>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <hr>
+                        <!-- Movie Trailer -->  
+                        <p class="trailer-storyline">
+                        </p>
+                        <hr>
+                        <!-- Additional Info -->  
+                        <div>
+                          <strong>Genre: </strong>
+                          <p class="trailer-genre">
+                          </div>
+                          <div>
+                            <strong>Director: </strong>
+                            <p class="trailer-director">
+                            </div>
+                            <div>
+                              <strong>Actors: </strong>
+                              <p class="trailer-actors">
+                              </div>
+                              <div>
+                                <strong>Awards: </strong>
+                                <p class="trailer-awards">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Main Page Content -->
+                      <div class="container">
+                        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                          <div class="container">
+                            <div class="navbar-header">
+                              <a class="navbar-brand" href="#">
+                                <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                                Selene's Movie Trailers Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="jumbotron">
+                          <h1>
+                            Movie Trailer Website
+                          </h1>
+                          <p>
+                            Hi! Here's my selection of movie trailers. 
+                            Click on any movie thumbnail to display its trailer, plot and movie trivia.
+                          </p>
+                        </div>
+                        <div class="col-md-6 col-lg-4 movie-tile text-center" 
+data-trailer-youtube-id="frdj1zb9sMY" 
+data-title-id="Rogue One" 
+data-storyline-id="All looks lost for the Rebellion against the Empire as they learn of the existence of a new super weapon, the Death Star. Once a possible weakness in its construction is uncovered, the Rebel Alliance must set out on a desperate mission to steal the plans for the Death Star. The future of the entire galaxy now rests upon its success."   
+data-awards-id="Nominated for 2 Oscars. Another 21 wins & 77 nominations."
+data-director-id="Gareth Edwards"
+data-genre-id="Action, Adventure, Sci-Fi"
+data-boxoffice-id="$532,171,696"
+data-rated-id="PG-13"
+data-rating-id="7.9"
+data-runtime-id="133 min"
+data-year-id="2016"
+data-votes-id="373,473"
+data-actors-id="Felicity Jones, Diego Luna, Alan Tudyk, Donnie Yen"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg"> 
-      <h4>Rogue One</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg"> 
+        <h4>Rogue One</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="gCcx85zbxz4" 
-      data-title-id="Blade Runner 2049" 
-      data-storyline-id="Thirty years after the events of the first film, a new blade runner, LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former LAPD blade runner who has been missing for 30 years."   
-      data-awards-id="2 wins."
-      data-director-id="Denis Villeneuve"
-      data-genre-id="Mystery, Sci-Fi, Thriller"
-      data-boxoffice-id="$32,753,122"
-      data-rated-id="R"
-      data-rating-id="8.5"
-      data-runtime-id="164 min"
-      data-year-id="2017"
-      data-votes-id="139,023"
-      data-actors-id="Ryan Gosling, Dave Bautista, Robin Wright, Mark Arnold"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="gCcx85zbxz4" 
+data-title-id="Blade Runner 2049" 
+data-storyline-id="Thirty years after the events of the first film, a new blade runner, LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former LAPD blade runner who has been missing for 30 years."   
+data-awards-id="6 wins & 13 nominations."
+data-director-id="Denis Villeneuve"
+data-genre-id="Mystery, Sci-Fi, Thriller"
+data-boxoffice-id="$89,276,502"
+data-rated-id="R"
+data-rating-id="8.4"
+data-runtime-id="164 min"
+data-year-id="2017"
+data-votes-id="156,246"
+data-actors-id="Ryan Gosling, Dave Bautista, Robin Wright, Mark Arnold"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SX300.jpg"> 
-      <h4>Blade Runner 2049</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SX300.jpg"> 
+        <h4>Blade Runner 2049</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="duGqrYw4usE" 
-      data-title-id="Guardians of the Galaxy Vol 2" 
-      data-storyline-id="After saving Xandar from Ronan's wrath, the Guardians are now recognized as heroes. Now the team must help their leader Star Lord (Chris Pratt) uncover the truth behind his true heritage. Along the way, old foes turn to allies and betrayal is blooming. And the Guardians find that they are up against a devastating new menace who is out to rule the galaxy."   
-      data-awards-id="4 wins & 12 nominations."
-      data-director-id="James Gunn"
-      data-genre-id="Action, Adventure, Sci-Fi"
-      data-boxoffice-id="$389,804,217"
-      data-rated-id="PG-13"
-      data-rating-id="7.8"
-      data-runtime-id="136 min"
-      data-year-id="2017"
-      data-votes-id="287,912"
-      data-actors-id="Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="duGqrYw4usE" 
+data-title-id="Guardians of the Galaxy Vol 2" 
+data-storyline-id="After saving Xandar from Ronan's wrath, the Guardians are now recognized as heroes. Now the team must help their leader Star Lord (Chris Pratt) uncover the truth behind his true heritage. Along the way, old foes turn to allies and betrayal is blooming. And the Guardians find that they are up against a devastating new menace who is out to rule the galaxy."   
+data-awards-id="6 wins & 13 nominations."
+data-director-id="James Gunn"
+data-genre-id="Action, Adventure, Sci-Fi"
+data-boxoffice-id="$389,804,217"
+data-rated-id="PG-13"
+data-rating-id="7.8"
+data-runtime-id="136 min"
+data-year-id="2017"
+data-votes-id="301,863"
+data-actors-id="Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg"> 
-      <h4>Guardians of the Galaxy Vol 2</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg"> 
+        <h4>Guardians of the Galaxy Vol 2</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="sUkZFetWYY0" 
-      data-title-id="Despicable Me" 
-      data-storyline-id="In a happy suburban neighborhood surrounded by white picket fences with flowering rose bushes, sits a black house with a dead lawn. Unbeknownst to the neighbors, hidden beneath this home is a vast secret hideout. Surrounded by a small army of minions, we discover Gru, planning the biggest heist in the history of the world. He is going to steal the moon. (Yes, the moon!) Gru delights in all things wicked. Armed with his arsenal of shrink rays, freeze rays, and battle-ready vehicles for land and air, he vanquishes all who stand in his way. Until the day he encounters the immense will of three little orphaned girls who look at him and see something that no one else has ever seen: a potential Dad. The world's greatest villain has just met his greatest challenge: three little girls named Margo, Edith and Agnes."   
-      data-awards-id="Nominated for 1 Golden Globe. Another 3 wins & 40 nominations."
-      data-director-id="Pierre Coffin, Chris Renaud"
-      data-genre-id="Animation, Adventure, Comedy"
-      data-boxoffice-id="$251,476,985"
-      data-rated-id="PG"
-      data-rating-id="7.7"
-      data-runtime-id="95 min"
-      data-year-id="2010"
-      data-votes-id="426,048"
-      data-actors-id="Steve Carell, Jason Segel, Russell Brand, Julie Andrews"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="sUkZFetWYY0" 
+data-title-id="Despicable Me" 
+data-storyline-id="In a happy suburban neighborhood surrounded by white picket fences with flowering rose bushes, sits a black house with a dead lawn. Unbeknownst to the neighbors, hidden beneath this home is a vast secret hideout. Surrounded by a small army of minions, we discover Gru, planning the biggest heist in the history of the world. He is going to steal the moon. (Yes, the moon!) Gru delights in all things wicked. Armed with his arsenal of shrink rays, freeze rays, and battle-ready vehicles for land and air, he vanquishes all who stand in his way. Until the day he encounters the immense will of three little orphaned girls who look at him and see something that no one else has ever seen: a potential Dad. The world's greatest villain has just met his greatest challenge: three little girls named Margo, Edith and Agnes."   
+data-awards-id="Nominated for 1 Golden Globe. Another 3 wins & 40 nominations."
+data-director-id="Pierre Coffin, Chris Renaud"
+data-genre-id="Animation, Adventure, Comedy"
+data-boxoffice-id="$251,476,985"
+data-rated-id="PG"
+data-rating-id="7.7"
+data-runtime-id="95 min"
+data-year-id="2010"
+data-votes-id="426,048"
+data-actors-id="Steve Carell, Jason Segel, Russell Brand, Julie Andrews"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg"> 
-      <h4>Despicable Me</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg"> 
+        <h4>Despicable Me</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="5PSNL1qE6VY" 
-      data-title-id="Avatar" 
-      data-storyline-id="When his brother is killed in a robbery, paraplegic Marine Jake Sully decides to take his place in a mission on the distant world of Pandora. There he learns of greedy corporate figurehead Parker Selfridge's intentions of driving off the native humanoid "Na'vi" in order to mine for the precious material scattered throughout their rich woodland. In exchange for the spinal surgery that will fix his legs, Jake gathers intel for the cooperating military unit spearheaded by gung-ho Colonel Quaritch, while simultaneously attempting to infiltrate the Na'vi people with the use of an "avatar" identity. While Jake begins to bond with the native tribe and quickly falls in love with the beautiful alien Neytiri, the restless Colonel moves forward with his ruthless extermination tactics, forcing the soldier to take a stand - and fight back in an epic battle for the fate of Pandora."   
-      data-awards-id="Won 3 Oscars. Another 85 wins & 128 nominations."
-      data-director-id="James Cameron"
-      data-genre-id="Action, Adventure, Fantasy"
-      data-boxoffice-id="$749,700,000"
-      data-rated-id="PG-13"
-      data-rating-id="7.8"
-      data-runtime-id="162 min"
-      data-year-id="2009"
-      data-votes-id="962,871"
-      data-actors-id="Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="5PSNL1qE6VY" 
+data-title-id="Avatar" 
+data-storyline-id="When his brother is killed in a robbery, paraplegic Marine Jake Sully decides to take his place in a mission on the distant world of Pandora. There he learns of greedy corporate figurehead Parker Selfridge's intentions of driving off the native humanoid "Na'vi" in order to mine for the precious material scattered throughout their rich woodland. In exchange for the spinal surgery that will fix his legs, Jake gathers intel for the cooperating military unit spearheaded by gung-ho Colonel Quaritch, while simultaneously attempting to infiltrate the Na'vi people with the use of an "avatar" identity. While Jake begins to bond with the native tribe and quickly falls in love with the beautiful alien Neytiri, the restless Colonel moves forward with his ruthless extermination tactics, forcing the soldier to take a stand - and fight back in an epic battle for the fate of Pandora."   
+data-awards-id="Won 3 Oscars. Another 85 wins & 128 nominations."
+data-director-id="James Cameron"
+data-genre-id="Action, Adventure, Fantasy"
+data-boxoffice-id="$749,700,000"
+data-rated-id="PG-13"
+data-rating-id="7.8"
+data-runtime-id="162 min"
+data-year-id="2009"
+data-votes-id="962,871"
+data-actors-id="Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg"> 
-      <h4>Avatar</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg"> 
+        <h4>Avatar</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="hWnAqFyaQ5s" 
-      data-title-id="Cloud Atlas" 
-      data-storyline-id="Everything is connected: an 1849 diary of an ocean voyage across the Pacific; letters from a composer to his lover; a thriller about a conspiracy at a nuclear power plant; a farce about a publisher in a nursing home; a rebellious clone in futuristic Korea; and the tale of a tribe living on post-apocalyptic Hawaii far in the future."   
-      data-awards-id="Nominated for 1 Golden Globe. Another 16 wins & 75 nominations."
-      data-director-id="Tom Tykwer, Lana Wachowski, Lilly Wachowski"
-      data-genre-id="Action, Drama, Mystery"
-      data-boxoffice-id="$22,100,000"
-      data-rated-id="R"
-      data-rating-id="7.5"
-      data-runtime-id="172 min"
-      data-year-id="2012"
-      data-votes-id="307,025"
-      data-actors-id="Tom Hanks, Halle Berry, Jim Broadbent, Hugo Weaving"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="hWnAqFyaQ5s" 
+data-title-id="Cloud Atlas" 
+data-storyline-id="Everything is connected: an 1849 diary of an ocean voyage across the Pacific; letters from a composer to his lover; a thriller about a conspiracy at a nuclear power plant; a farce about a publisher in a nursing home; a rebellious clone in futuristic Korea; and the tale of a tribe living on post-apocalyptic Hawaii far in the future."   
+data-awards-id="Nominated for 1 Golden Globe. Another 16 wins & 75 nominations."
+data-director-id="Tom Tykwer, Lana Wachowski, Lilly Wachowski"
+data-genre-id="Action, Drama, Mystery"
+data-boxoffice-id="$22,100,000"
+data-rated-id="R"
+data-rating-id="7.5"
+data-runtime-id="172 min"
+data-year-id="2012"
+data-votes-id="307,025"
+data-actors-id="Tom Hanks, Halle Berry, Jim Broadbent, Hugo Weaving"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMTgxMjc4NF5BMl5BanBnXkFtZTcwNjM5MTA2OA@@._V1_SX300.jpg"> 
-      <h4>Cloud Atlas</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMTgxMjc4NF5BMl5BanBnXkFtZTcwNjM5MTA2OA@@._V1_SX300.jpg"> 
+        <h4>Cloud Atlas</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="5_RsHRmIRBY" 
-      data-title-id="Million Dollar Baby" 
-      data-storyline-id="Wanting to learn from the best, aspiring boxer Maggie Fitzgerald wants Frankie Dunn to train her. At the outset he flatly refuses saying he has no interest in training a girl. Frankie leads a lonely existence, alienated from his only daughter and having few friends. Maggie's rough around the edges but shows a lot of grit in the ring and he eventually relents. Maggie not only proves to be the boxer he always dreamed of having under his wing but a friend who fills the great void he's had in his life. Maggie's career skyrockets but an accident in the ring leads her to ask Frankie for one last favor."   
-      data-awards-id="Won 4 Oscars. Another 63 wins & 83 nominations."
-      data-director-id="Clint Eastwood"
-      data-genre-id="Drama, Sport"
-      data-boxoffice-id="$100,422,786"
-      data-rated-id="PG-13"
-      data-rating-id="8.1"
-      data-runtime-id="132 min"
-      data-year-id="2004"
-      data-votes-id="532,484"
-      data-actors-id="Clint Eastwood, Hilary Swank, Morgan Freeman, Jay Baruchel"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="5_RsHRmIRBY" 
+data-title-id="Million Dollar Baby" 
+data-storyline-id="Wanting to learn from the best, aspiring boxer Maggie Fitzgerald wants Frankie Dunn to train her. At the outset he flatly refuses saying he has no interest in training a girl. Frankie leads a lonely existence, alienated from his only daughter and having few friends. Maggie's rough around the edges but shows a lot of grit in the ring and he eventually relents. Maggie not only proves to be the boxer he always dreamed of having under his wing but a friend who fills the great void he's had in his life. Maggie's career skyrockets but an accident in the ring leads her to ask Frankie for one last favor."   
+data-awards-id="Won 4 Oscars. Another 63 wins & 83 nominations."
+data-director-id="Clint Eastwood"
+data-genre-id="Drama, Sport"
+data-boxoffice-id="$100,422,786"
+data-rated-id="PG-13"
+data-rating-id="8.1"
+data-runtime-id="132 min"
+data-year-id="2004"
+data-votes-id="532,484"
+data-actors-id="Clint Eastwood, Hilary Swank, Morgan Freeman, Jay Baruchel"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg"> 
-      <h4>Million Dollar Baby</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg"> 
+        <h4>Million Dollar Baby</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="EIawNRm9NWM" 
-      data-title-id="Man on Wire" 
-      data-storyline-id="On August 7, 1974, Philippe Petit, a French wire walker, juggler, and street performer days shy of his 25th birthday, spent 45 minutes walking, dancing, kneeling, and lying on a wire he and friends strung between the rooftops of the Twin Towers. Uses contemporary interviews, archival footage, and recreations to tell the story of his previous walks between towers of Notre Dame and of the Sydney Harbour Bridge, his passions and friendships, and the details of the night before the walk: getting cable into the towers, hiding from guards, and mounting the wire. It ends with observations of the profound changes the walk's success brought to Philippe and those closest to him."   
-      data-awards-id="Won 1 Oscar. Another 45 wins & 11 nominations."
-      data-director-id="James Marsh"
-      data-genre-id="Documentary"
-      data-boxoffice-id="$2,600,296"
-      data-rated-id="PG-13"
-      data-rating-id="7.8"
-      data-runtime-id="94 min"
-      data-year-id="2008"
-      data-votes-id="45,216"
-      data-actors-id="Philippe Petit, Jean François Heckel, Jean-Louis Blondeau, Annie Allix"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="EIawNRm9NWM" 
+data-title-id="Man on Wire" 
+data-storyline-id="On August 7, 1974, Philippe Petit, a French wire walker, juggler, and street performer days shy of his 25th birthday, spent 45 minutes walking, dancing, kneeling, and lying on a wire he and friends strung between the rooftops of the Twin Towers. Uses contemporary interviews, archival footage, and recreations to tell the story of his previous walks between towers of Notre Dame and of the Sydney Harbour Bridge, his passions and friendships, and the details of the night before the walk: getting cable into the towers, hiding from guards, and mounting the wire. It ends with observations of the profound changes the walk's success brought to Philippe and those closest to him."   
+data-awards-id="Won 1 Oscar. Another 45 wins & 11 nominations."
+data-director-id="James Marsh"
+data-genre-id="Documentary, Biography"
+data-boxoffice-id="$2,600,296"
+data-rated-id="PG-13"
+data-rating-id="7.8"
+data-runtime-id="94 min"
+data-year-id="2008"
+data-votes-id="45,536"
+data-actors-id="Philippe Petit, Jean François Heckel, Jean-Louis Blondeau, Annie Allix"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTk3NDY1NV5BMl5BanBnXkFtZTcwNDk0ODg3MQ@@._V1_SX300.jpg"> 
-      <h4>Man on Wire</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTk3NDY1NV5BMl5BanBnXkFtZTcwNDk0ODg3MQ@@._V1_SX300.jpg"> 
+        <h4>Man on Wire</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="6kw1UVovByw" 
-      data-title-id="Skyfall" 
-      data-storyline-id="When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory (Ralph Fiennes), the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve (Naomie Harris) - following a trail to the mysterious Silva (Javier Bardem), whose lethal and hidden motives have yet to reveal themselves."   
-      data-awards-id="Won 2 Oscars. Another 65 wins & 119 nominations."
-      data-director-id="Sam Mendes"
-      data-genre-id="Action, Adventure, Thriller"
-      data-boxoffice-id="$299,300,000"
-      data-rated-id="PG-13"
-      data-rating-id="7.8"
-      data-runtime-id="143 min"
-      data-year-id="2012"
-      data-votes-id="558,532"
-      data-actors-id="Daniel Craig, Judi Dench, Javier Bardem, Ralph Fiennes"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="6kw1UVovByw" 
+data-title-id="Skyfall" 
+data-storyline-id="When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory (Ralph Fiennes), the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve (Naomie Harris) - following a trail to the mysterious Silva (Javier Bardem), whose lethal and hidden motives have yet to reveal themselves."   
+data-awards-id="Won 2 Oscars. Another 65 wins & 119 nominations."
+data-director-id="Sam Mendes"
+data-genre-id="Action, Adventure, Thriller"
+data-boxoffice-id="$299,300,000"
+data-rated-id="PG-13"
+data-rating-id="7.8"
+data-runtime-id="143 min"
+data-year-id="2012"
+data-votes-id="560,156"
+data-actors-id="Daniel Craig, Judi Dench, Javier Bardem, Ralph Fiennes"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDVhZmJiYWMtNmIzMC00ZWNiLTkzZDYtNGNlZmViMGM4OGExXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"> 
-      <h4>Skyfall</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDVhZmJiYWMtNmIzMC00ZWNiLTkzZDYtNGNlZmViMGM4OGExXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"> 
+        <h4>Skyfall</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="LO3n67BQvh0" 
-      data-title-id="Coraline" 
-      data-storyline-id="When Coraline moves to an old house, she feels bored and neglected by her parents. She finds a hidden door with a bricked up passage. During the night, she crosses the passage and finds a parallel world where everybody has buttons instead of eyes, with caring parents and all her dreams coming true. When the Other Mother invites Coraline to stay in her world forever, the girl refuses and finds that the alternate reality where she is trapped is only a trick to lure her."   
-      data-awards-id="Nominated for 1 Oscar. Another 7 wins & 43 nominations."
-      data-director-id="Henry Selick"
-      data-genre-id="Animation, Family, Fantasy"
-      data-boxoffice-id="$75,169,351"
-      data-rated-id="PG"
-      data-rating-id="7.7"
-      data-runtime-id="100 min"
-      data-year-id="2009"
-      data-votes-id="162,748"
-      data-actors-id="Dakota Fanning, Teri Hatcher, Jennifer Saunders, Dawn French"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="LO3n67BQvh0" 
+data-title-id="Coraline" 
+data-storyline-id="When Coraline moves to an old house, she feels bored and neglected by her parents. She finds a hidden door with a bricked up passage. During the night, she crosses the passage and finds a parallel world where everybody has buttons instead of eyes, with caring parents and all her dreams coming true. When the Other Mother invites Coraline to stay in her world forever, the girl refuses and finds that the alternate reality where she is trapped is only a trick to lure her."   
+data-awards-id="Nominated for 1 Oscar. Another 7 wins & 43 nominations."
+data-director-id="Henry Selick"
+data-genre-id="Animation, Family, Fantasy"
+data-boxoffice-id="$75,169,351"
+data-rated-id="PG"
+data-rating-id="7.7"
+data-runtime-id="100 min"
+data-year-id="2009"
+data-votes-id="162,748"
+data-actors-id="Dakota Fanning, Teri Hatcher, Jennifer Saunders, Dawn French"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxNjM5NzkxNV5BMl5BanBnXkFtZTcwMzg5NDMwMg@@._V1_SX300.jpg"> 
-      <h4>Coraline</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxNjM5NzkxNV5BMl5BanBnXkFtZTcwMzg5NDMwMg@@._V1_SX300.jpg"> 
+        <h4>Coraline</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="PI8XBKb6DQk" 
-      data-title-id="Ex Machina" 
-      data-storyline-id="Caleb, a 26 year old programmer at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world's first true artificial intelligence, housed in the body of a beautiful robot girl."   
-      data-awards-id="Won 1 Oscar. Another 70 wins & 153 nominations."
-      data-director-id="Alex Garland"
-      data-genre-id="Drama, Mystery, Sci-Fi"
-      data-boxoffice-id="$19,012,798"
-      data-rated-id="R"
-      data-rating-id="7.7"
-      data-runtime-id="108 min"
-      data-year-id="2014"
-      data-votes-id="360,105"
-      data-actors-id="Domhnall Gleeson, Corey Johnson, Oscar Isaac, Alicia Vikander"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="PI8XBKb6DQk" 
+data-title-id="Ex Machina" 
+data-storyline-id="Caleb, a 26 year old programmer at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world's first true artificial intelligence, housed in the body of a beautiful robot girl."   
+data-awards-id="Won 1 Oscar. Another 70 wins & 153 nominations."
+data-director-id="Alex Garland"
+data-genre-id="Drama, Mystery, Sci-Fi"
+data-boxoffice-id="$19,012,798"
+data-rated-id="R"
+data-rating-id="7.7"
+data-runtime-id="108 min"
+data-year-id="2014"
+data-votes-id="360,105"
+data-actors-id="Domhnall Gleeson, Corey Johnson, Oscar Isaac, Alicia Vikander"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg"> 
-      <h4>Ex Machina</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg"> 
+        <h4>Ex Machina</h4>
     </div>
 </div>
 <div class="col-md-6 col-lg-4 movie-tile text-center" 
-      data-trailer-youtube-id="swrcKRVgeGI" 
-      data-title-id="MirrorMask" 
-      data-storyline-id="In a fantasy world of opposing kingdoms, a 15-year-old girl named Helena who works at the family circus with her father and mother, who wishes--quite ironically--that she could run away from the circus and join 'real life'. But such is not to be the case, as she finds herself on a strange journey into the Dark Lands, a fantastic landscape filled with giants, Monkeybirds and dangerous sphinxes. She must find the fabled MirrorMask in order to save the kingdom and get back home."   
-      data-awards-id="5 wins & 2 nominations."
-      data-director-id="Dave McKean"
-      data-genre-id="Adventure, Fantasy"
-      data-boxoffice-id="$802,961"
-      data-rated-id="PG"
-      data-rating-id="6.9"
-      data-runtime-id="101 min"
-      data-year-id="2005"
-      data-votes-id="21,006"
-      data-actors-id="Stephanie Leonidas, Jason Barry, Rob Brydon, Gina McKee"
-      data-toggle="modal" 
-      data-target="#trailer">
+data-trailer-youtube-id="swrcKRVgeGI" 
+data-title-id="MirrorMask" 
+data-storyline-id="In a fantasy world of opposing kingdoms, a 15-year-old girl named Helena who works at the family circus with her father and mother, who wishes--quite ironically--that she could run away from the circus and join 'real life'. But such is not to be the case, as she finds herself on a strange journey into the Dark Lands, a fantastic landscape filled with giants, Monkeybirds and dangerous sphinxes. She must find the fabled MirrorMask in order to save the kingdom and get back home."   
+data-awards-id="5 wins & 2 nominations."
+data-director-id="Dave McKean"
+data-genre-id="Adventure, Fantasy"
+data-boxoffice-id="$802,961"
+data-rated-id="PG"
+data-rating-id="6.9"
+data-runtime-id="101 min"
+data-year-id="2005"
+data-votes-id="21,006"
+data-actors-id="Stephanie Leonidas, Jason Barry, Rob Brydon, Gina McKee"
+data-toggle="modal" 
+data-target="#trailer">
     <div class="thumbnail">
-      <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMGEyMjcyNDctYWVkNy00ZDEyLTgxMDUtNWY0ZWIyNWMzNGJlXkEyXkFqcGdeQXVyNDUxNjc5NjY@._V1_SX300.jpg"> 
-      <h4>MirrorMask</h4>
+        <img class="movie_poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMGEyMjcyNDctYWVkNy00ZDEyLTgxMDUtNWY0ZWIyNWMzNGJlXkEyXkFqcGdeQXVyNDUxNjc5NjY@._V1_SX300.jpg"> 
+        <h4>MirrorMask</h4>
     </div>
 </div>
 
-    </div>
-  </body>
-</html>
+                      </div>
+                    </body>
+                    </html>
 <footer id="footer">
     <p>Selene Waide 2017</p>
 </footer>

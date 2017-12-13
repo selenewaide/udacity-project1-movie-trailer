@@ -1,3 +1,5 @@
+# Movies class.
+# Used to compile data for each movie.
 
 
 class Movie():

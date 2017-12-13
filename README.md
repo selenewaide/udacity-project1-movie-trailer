@@ -50,5 +50,5 @@ Selene Waide
 ## Acknowledgments
 
 * Udacity Full Stack Nanodegree for a fun first project
-* Youtube for use of it's API
-* OMDB for use of it's API
+* Youtube for use of its API
+* OMDB for use of its API
