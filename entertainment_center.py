@@ -4,12 +4,12 @@
 
 
 import fresh_tomatoes
-import media
+import movie
 import requests
 
 
 movie_names_file = 'data/movie_names.txt'
-keys_file = 'data/keys.txt'
+keys_file = 'data/api_keys.txt'
 
 
 def get_data_list_from_file(file_name):
@@ -21,7 +21,7 @@ def get_data_list_from_file(file_name):
     with open(file_name) as f:
         data_list = f.readlines()
         # Remove whitespace characters like `\n` at the end of each line.
-        data_list = [x.strip() for x in data_list] 
+        data_list = [x.strip() for x in data_list]
     return data_list
 
 
@@ -30,8 +30,11 @@ def get_data_from_api(url):
     Get api data and return a python object.
     '''
     response = requests.get(url)
-    data = response.json()
-    return data
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        print('error in request')
 
 
 def get_movie_list():
@@ -61,8 +64,8 @@ def get_movie_list():
         youtube_video_id = str(youtube_data['items'][0]['id']['videoId'])
 
         # Create a movie object and add to movie_list
-        movie = media.Movie(movie_name, omdb_data, youtube_video_id)
-        movie_list.append(movie)
+        movie_data = movie.Movie(movie_name, omdb_data, youtube_video_id)
+        movie_list.append(movie_data)
     return movie_list
 
 
