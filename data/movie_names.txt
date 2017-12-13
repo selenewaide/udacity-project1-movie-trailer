@@ -10,4 +10,3 @@ Skyfall
 Coraline
 Ex Machina
 MirrorMask
-Atomic Blonde
