@@ -70,5 +70,6 @@ def get_movie_list():
 
 
 if __name__ == "__main__":
+    fresh_tomatoes.read_html_content()
     movies = get_movie_list()
     fresh_tomatoes.open_movies_page(movies)

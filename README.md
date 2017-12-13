@@ -29,7 +29,7 @@ git clone https://github.com/selenewaide/udacity-project1-movie-trailer.git
 ```
 
 ###### Step 2
-In the 'data' directory of the project, create a new file called 'keys.txt'. The first line of this file must contain the Youtube API key. The second line of this file must contain the OMDB API key.
+In the 'data' directory of the project, create a new file called 'api_keys.txt'. The first line of this file must contain the Youtube API key. The second line of this file must contain the OMDB API key.
 
 ###### Step 3
 Run the python script 'entertainment_center.py' to render the website.

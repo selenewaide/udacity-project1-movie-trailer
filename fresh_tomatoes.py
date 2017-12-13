@@ -13,12 +13,14 @@ html_content = {
     'movie_tile_content': '',
     'main_page_footer': ''
 }
-# Reads html files into a dictionary of templates for rendering.
-# Using unicode for the template text to allow use of accented characters.
-for page_section in html_content.keys():
-    html_file = codecs.open('templates/' + page_section +
-                            '.html', 'r', encoding='utf-8')
-    html_content[page_section] = html_file.read()
+
+def read_html_content():
+    # Reads html files into a dictionary of templates for rendering.
+    # Using unicode for the template text to allow use of accented characters.
+    for page_section in html_content.keys():
+        html_file = codecs.open('templates/' + page_section +
+                                '.html', 'r', encoding='utf-8')
+        html_content[page_section] = html_file.read()
 
 
 def create_movie_tiles_content(movies):
