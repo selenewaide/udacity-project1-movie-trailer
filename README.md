@@ -15,8 +15,6 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * Python version 2.7, or later - to run the script that renders the website
-* Git - to clone the project repo
-* Web Browser (such as Chrome or Safari)
 
 ### Installing & Running
 
